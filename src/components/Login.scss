@@ -1,0 +1,99 @@
+.login-Container {
+  .actionButton {
+    background: #666;
+    color: #FFF;
+    padding: 5px;
+    border: 2px solid #DDD;
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+    transition: transform 1s;
+    margin: 5px 0;
+    max-width: 100%;  
+
+    &.prime {
+      background: #054271;
+      border: 2px solid #086dba;
+
+      &:hover {
+        border: 2px solid #0a8aeb
+    }
+
+    }
+
+    &:hover {
+        transform: scale(1.2);
+        border: 2px solid #EEE
+    }
+  }
+
+  .modal-takeover {
+    //display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+    //react-transition-group css transitions
+    &-enter {
+      opacity: 0;
+    }
+    &-enter-active {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+    &-exit {
+      opacity: 1;
+    }
+    &-exit-active {
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+
+    .modal-content {
+      background: white;
+      color: #282c34;
+      padding: 2vmax;
+
+      .form-container {
+        width: 12vmax;
+      }
+
+      input {
+        padding: 5px;
+        margin: 5px;
+        border: 0;
+        background: #f1f1f1;
+        font-size: calc(10px + 2vmin);
+        max-width: 100%;
+      }
+
+      .forgotten {
+        font-size: calc(10px + 1vmin);
+        cursor: pointer;
+        user-select: none;
+      }
+
+      &-enter {
+        transform: scale(0.6);
+      }
+      &-enter-active {
+        transform: scale(1);
+        transition: transform 300ms;
+      }
+      &-exit {
+        transform: scale(1);
+      }
+      &-exit-active {
+        transform: scale(0.6);
+        transition: transform 300ms;
+      }
+    }
+  }
+}
