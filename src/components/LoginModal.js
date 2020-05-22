@@ -14,12 +14,14 @@ export default function LoginModal(props) {
         >
             <form className="modal-content" onSubmit="#" onClick={(e) => (e.stopPropagation()) }>
                 <div className="form-container">
-                  <h1>Login</h1>
-                  <input type="text" placeholder="Username" name="uname" required />
-                  
-                  <input type="password" placeholder="Password" name="psw" required />
+                  <h2>Login</h2>
+                  <div className="input-container">
+                    <input type="email" placeholder="Email" name="email" required />
+                    
+                    <input type="password" placeholder="Password" name="psw" required />
 
-                  <ActionButton action={props.close} style="Prime" text="Login" />
+                    <ActionButton action={props.close} style="Prime" text="Login" />
+                  </div>
                 </div>
             </form>
         </CSSTransition>

@@ -6,8 +6,7 @@
     border: 2px solid #DDD;
     cursor: pointer;
     user-select: none;
-    transform: scale(1);
-    transition: transform 1s;
+    transition: background 1s;
     margin: 5px 0;
     max-width: 100%;  
 
@@ -16,14 +15,14 @@
       border: 2px solid #086dba;
 
       &:hover {
-        border: 2px solid #0a8aeb
+        background: #0a8aeb;
+        border: 2px solid #086dba;
     }
 
     }
 
     &:hover {
-        transform: scale(1.2);
-        border: 2px solid #EEE
+        border: 2px solid #EEE;
     }
   }
 
@@ -58,6 +57,7 @@
 
     .modal-content {
       background: white;
+      border-radius: 5px;
       color: #282c34;
       padding: 2vmax;
 
@@ -67,11 +67,12 @@
 
       input {
         padding: 5px;
-        margin: 5px;
+        margin: 5px 0;
         border: 0;
         background: #f1f1f1;
-        font-size: calc(10px + 2vmin);
-        max-width: 100%;
+        font-size: calc(10px + 1vmin);
+        width: 100%;
+        box-sizing: border-box;  
       }
 
       .forgotten {
